@@ -1,0 +1,12 @@
+function diffArray(arr1, arr2) {
+  
+  let difference = new Set(arr1)
+  
+  for (let item of arr2) {
+    if (difference.has(item)) {difference.delete(item)}
+    else {difference.add(item)}
+  }
+  return Array.from(difference)
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);

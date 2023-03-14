@@ -1,0 +1,13 @@
+function myReplace(str, before, after) {
+  const regexCapitalize = /^[A-Z]/
+  
+  if (regexCapitalize.test(before)) {
+    const afterCapitalize = after.replace(after[0], after[0].toUpperCase())
+    return str.replace(before, afterCapitalize)
+  } else {
+    const afterLowerCase = after.replace(after[0], after[0].toLowerCase())
+    return str.replace(before, afterLowerCase)
+  }
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");

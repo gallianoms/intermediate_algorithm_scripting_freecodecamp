@@ -1,0 +1,22 @@
+function pairElement(str) {
+   return str.split('').map(char => {
+    
+    if (char === 'G') {
+      return char = ["G", "C"]
+    }
+    
+    if (char === 'C') {
+      return char = ["C", "G"]
+    }
+    
+    if (char === 'A') {
+      return char = ["A", "T"]
+    }
+    
+    if (char === 'T') {
+      return char = ["T", "A"]
+    }
+  })
+}
+
+pairElement("GCG");

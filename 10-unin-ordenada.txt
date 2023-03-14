@@ -1,0 +1,6 @@
+function uniteUnique(...arr) {
+  const set = new Set(arr.flat())
+  return Array.from(set)
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);

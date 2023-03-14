@@ -1,0 +1,9 @@
+function dropElements(arr, func) {
+  const num = arr.find(func)
+  if (num === undefined) return []
+  const idx = arr.indexOf(num)
+  return arr.slice(idx)
+
+}
+
+dropElements([1, 2, 3], function(n) {return n < 3; });

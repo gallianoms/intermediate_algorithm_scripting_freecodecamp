@@ -1,0 +1,16 @@
+function translatePigLatin(str) {
+  let arr = []
+  
+  if (/^[aeiou]/.test(str)) {
+    arr = str.split('')
+    arr.splice(arr.length, 0, 'way')
+    return arr.join('')
+  }
+  
+  if (str.match(/[^aeiou+]/)) {
+    const substr = str.match(/[^aeiou]+/)[0] 
+    return str.replace(/[^aeiou]+/, '').concat(substr).concat('ay')
+  }
+}
+
+translatePigLatin("consonant");

@@ -1,0 +1,25 @@
+function smallestCommons(arr) {
+  
+  const min = Math.min(...arr) // 1
+  const max = Math.max(...arr) // 5
+  
+  const arrNum = [] // [1, 2, 3, 4, 5]
+  for (let i = min; i <= max; i++) {
+    arrNum.push(i)
+  }
+
+  let flag = true
+  let i = 1
+  let result = 0
+  while (flag) {
+    let multiply = max * i // 5, 10, 15, 20, 25, ...
+    if (arrNum.every(num => multiply % num === 0)) { // true
+      flag = false
+      result = multiply
+    }
+  i++
+  }
+ return result // 60
+}
+
+smallestCommons([1,5]);

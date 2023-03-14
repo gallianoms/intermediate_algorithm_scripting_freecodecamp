@@ -1,0 +1,16 @@
+function fearNotLetter(str) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  
+  if (str === alphabet) return undefined
+  
+  const first = str[0]
+  const idx = alphabet.indexOf(first)
+  
+  const subAlphabet = alphabet.slice(idx)
+  
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== subAlphabet[i]) return subAlphabet[i]
+  }
+}
+
+fearNotLetter("abce");

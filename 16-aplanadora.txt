@@ -1,0 +1,18 @@
+function steamrollArray(arr) {
+  
+  const arrAux = JSON
+    .stringify(arr)
+    .split('')
+  
+  const newArr = []
+  for (let i = 1; i < arrAux.length; i++) {
+    if (arrAux[i] !== '[' && arrAux[i] !== ']') newArr.push(arrAux[i])
+  }
+  
+  newArr.unshift('[')
+  newArr.push(']')
+  return JSON.parse(newArr.join('').replace(/,,/, ','))
+  
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);

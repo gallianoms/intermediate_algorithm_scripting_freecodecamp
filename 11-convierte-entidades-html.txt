@@ -1,0 +1,19 @@
+function convertHTML(str) {
+  const character = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&apos;'
+  }
+  
+  return str
+    .replace(/&/g, character['&'])
+    .replace(/</g, character['<'])
+    .replace(/>/g, character['>'])
+    .replace(/"/g, character['"'])
+    .replace(/'/g, character["'"])
+
+}
+
+convertHTML("Dolce & Gabbana");

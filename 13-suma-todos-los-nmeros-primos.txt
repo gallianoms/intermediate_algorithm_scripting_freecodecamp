@@ -1,0 +1,18 @@
+function sumPrimes(num) {
+  
+  const arr = []
+
+  while (num > 1) {
+    if (isPrime(num)) arr.push(num)
+    num--
+  }
+  
+  return arr.reduce((acc, num) => acc + num)
+}
+
+const isPrime = (num) => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false
+  }
+  return true
+}
